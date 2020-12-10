@@ -17,18 +17,18 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile_bike.jpeg',
+  img: 'profile_bike.jpg',
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.youtube.com/', // if no resume, the button will not show up
+  resume: 'https://qiita.com/kenRp01', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'angularChat.jpeg',
+    img: 'angularChat.jpg',
     title: 'AngularChat',
     info: 'Angular学習初めにAngular,TypeScript+Firebaseで作成したチャットアプリ',
     info2:
@@ -38,7 +38,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'todo-app.jpeg',
+    img: 'todo-app.jpg',
     title: 'todo-app',
     info: 'Angular学習のため作成したtodoアプリ',
     info2: '',
@@ -47,7 +47,7 @@ export const projectsData = [
   },
   {
     id: nanoid(),
-    img: 'login-app.jpeg',
+    img: 'login-app.jpg',
     title: 'login-app',
     info:
       '社内のエンジニアにAngularを用いた開発を体験してもらうために簡易的に作成したログイン画面。AngularMaterialの学習にもなった。',
