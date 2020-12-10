@@ -42,7 +42,7 @@ const About = () => {
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphTwo ||
-                    'バックエンドをメインにシステム開発を経験。メイン言語はJava。SprnigBoot,thymeleaf,Angular,TypeScript,selenium,Ruby,Pythonの経験あり。'}
+                    'バックエンドをメインにシステム開発を経験。メイン言語はJava。SprnigBoot,thymeleaf,Angular,TypeScript,Rubyの経験あり。'}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphThree ||

@@ -30,36 +30,38 @@ export const projectsData = [
     id: nanoid(),
     img: 'angularChat.jpeg',
     title: 'AngularChat',
-    info: '',
-    info2: '',
+    info: 'Angular学習初めにAngular,TypeScript+Firebaseで作成したチャットアプリ',
+    info2:
+      'Angular,TypeScript,Firebaseについて個人で学習しながら基本的なCRUD処理を行うアプリケーション',
     url: 'https://angular-chat-dcc8f.web.app/',
-    repo: 'https://angular-chat-dcc8f.web.app/', // if no repo, the button will not show up
+    repo: 'https://github.com/kenRp01/angular-chat', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'todo-app.jpeg',
     title: 'todo-app',
-    info: '',
+    info: 'Angular学習のため作成したtodoアプリ',
     info2: '',
     url: 'https://todo-demo-app-angular-68704.web.app/',
-    repo: 'https://todo-demo-app-angular-68704.web.app/', // if no repo, the button will not show up
+    repo: 'https://github.com/kenRp01/todo-app', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'login-app.jpeg',
     title: 'login-app',
-    info: '',
-    info2: '',
+    info:
+      '社内のエンジニアにAngularを用いた開発を体験してもらうために簡易的に作成したログイン画面。AngularMaterialの学習にもなった。',
+    info2: 'https://qiita.com/kenRp01/items/bc42fa1cdc766b75f842',
     url: 'https://login-app-c2794.web.app/login',
-    repo: 'https://login-app-c2794.web.app/login', // if no repo, the button will not show up
+    repo: 'https://github.com/kenRp01/login-app', // if no repo, the button will not show up
   },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: '',
+  cta: 'Would you like to work with me?',
   btn: '',
-  email: '',
+  email: 'yqxxnaxr1109@gmail.com',
 };
 
 // FOOTER DATA
@@ -72,14 +74,14 @@ export const footerData = {
     },
     {
       id: nanoid(),
-      name: 'codepen',
-      url: '',
+      name: 'search',
+      url: 'https://qiita.com/kenRp01',
     },
-    {
-      id: nanoid(),
-      name: 'linkedin',
-      url: '',
-    },
+    // {
+    //   id: nanoid(),
+    //   name: 'linkedin',
+    //   url: '',
+    // },
     {
       id: nanoid(),
       name: 'github',
