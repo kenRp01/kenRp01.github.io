@@ -38,15 +38,15 @@ const About = () => {
             <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
               <div className="about-wrapper__info">
                 <p className="about-wrapper__info-text">
-                  {paragraphOne ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                  {paragraphOne || '26歳エンジニア４年目、趣味はボルダリング、キャンプ'}
                 </p>
                 <p className="about-wrapper__info-text">
                   {paragraphTwo ||
-                    'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi neque, ipsa animi maiores repellendu distinctioaperiam earum dolor voluptatum consequatur blanditiis inventore debitis fuga numquam voluptate architecto itaque molestiae.'}
+                    'バックエンドをメインにシステム開発を経験。メイン言語はJava。SprnigBoot,thymeleaf,Angular,TypeScript,selenium,Ruby,Pythonの経験あり。'}
                 </p>
                 <p className="about-wrapper__info-text">
-                  {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
+                  {paragraphThree ||
+                    'これから経験学習したいことGo言語でのマイクロサービスの構築、インフラ環境のコンテナ化、コード化。バックエンドGo,フロントReactで構成されたサービス開発の経験を積んでみたい。インフラ環境の構築経験はプライベートでしかないので、実際の開発にて経験していきたい。'}
                 </p>
                 {resume && (
                   <span className="d-flex mt-3">

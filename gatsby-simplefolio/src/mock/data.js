@@ -17,41 +17,41 @@ export const heroData = {
 
 // ABOUT DATA
 export const aboutData = {
-  img: 'profile.jpg',
+  img: 'profile_bike.jpeg',
   paragraphOne: '',
   paragraphTwo: '',
   paragraphThree: '',
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: 'https://www.youtube.com/', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'angularChat.jpeg',
+    title: 'AngularChat',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://angular-chat-dcc8f.web.app/',
+    repo: 'https://angular-chat-dcc8f.web.app/', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'todo-app.jpeg',
+    title: 'todo-app',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://todo-demo-app-angular-68704.web.app/',
+    repo: 'https://todo-demo-app-angular-68704.web.app/', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
+    img: 'login-app.jpeg',
+    title: 'login-app',
     info: '',
     info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    url: 'https://login-app-c2794.web.app/login',
+    repo: 'https://login-app-c2794.web.app/login', // if no repo, the button will not show up
   },
 ];
 
@@ -68,7 +68,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'twitter',
-      url: '',
+      url: 'https://twitter.com/APO14648835',
     },
     {
       id: nanoid(),
@@ -83,7 +83,7 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/kenRp01',
     },
   ],
 };
