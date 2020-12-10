@@ -6,3 +6,6 @@ GithubPages
 
 参考
 https://github.com/cobidev/react-simplefolio
+
+公開
+https://kenrp01.github.io/
