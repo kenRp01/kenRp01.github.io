@@ -61,17 +61,12 @@ export const projectsData = [
 export const contactData = {
   cta: 'Would you like to work with me?',
   btn: '',
-  email: 'yqxxnaxr1109@gmail.com',
+  email: 'kinema@digdig.org',
 };
 
 // FOOTER DATA
 export const footerData = {
   networks: [
-    {
-      id: nanoid(),
-      name: 'twitter',
-      url: 'https://twitter.com/APO14648835',
-    },
     {
       id: nanoid(),
       name: 'search',
