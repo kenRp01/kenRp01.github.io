@@ -14,4 +14,11 @@ https://kenrp01.github.io/
 cd gatsby-simplefolio
 npm run develop
 ```
+
 でローカル起動ができる
+
+```
+yarn deploy
+```
+
+で commit,push,deploy を行う
