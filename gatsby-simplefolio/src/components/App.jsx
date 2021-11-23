@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from 'react';
 import Hero from './Hero/Hero';
@@ -30,7 +31,6 @@ function App() {
       <Hero />
       <About />
       <Projects />
-
       <Contact />
       <a href="https://px.a8.net/svt/ejp?a8mat=3HKWNC+9Q2WHE+2OTA+HWPVL" rel="nofollow">
         <img
