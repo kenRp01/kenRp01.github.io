@@ -27,6 +27,22 @@ export default function HTML({
         {headComponents}
       </head>
       <body {...bodyAttributes}>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3552473861451375"
+          crossOrigin="anonymous"
+        />
+        {/* <!-- 横長広告 --> */}
+        <ins
+          className="adsbygoogle"
+          // eslint-disable-next-line react/style-prop-object
+          style={{ display: 'block' }}
+          data-ad-client="ca-pub-3552473861451375"
+          data-ad-slot="7070615353"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        />
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         {preBodyComponents}
         <div key="body" id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
