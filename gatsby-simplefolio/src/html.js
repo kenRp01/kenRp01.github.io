@@ -25,6 +25,10 @@ export default function HTML({
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         {headComponents}
+        <meta
+          name="google-site-verification"
+          content="pkDEu-F98KUoo5v_8gyYM9it2L9csuqVdahulXNj5kA"
+        />
       </head>
       <body {...bodyAttributes}>
         <script
