@@ -28,7 +28,7 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'angularChat.jpg',
+    img: 'go:reactChat.png',
     title: 'Go + React Chat',
     info: 'フロントエンドReact,TypescriptバックエンドGoで作成したチャットアプリ。',
     info2:
