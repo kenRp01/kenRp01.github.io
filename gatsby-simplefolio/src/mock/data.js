@@ -29,6 +29,16 @@ export const projectsData = [
   {
     id: nanoid(),
     img: 'angularChat.jpg',
+    title: 'Go + React Chat',
+    info: 'フロントエンドReact,TypescriptバックエンドGoで作成したチャットアプリ。',
+    info2:
+      'モダンな構成でアプリケーションを作成してみたかったので趣味で試したもの。参考教材(https://www.udemy.com/course/echo-go-react-restapi/)まだ理解が浅い部分があるので学習中(Qiita記事にまとめる予定)',
+    url: 'https://react-todo-app-five-silk.vercel.app/',
+    repo: 'https://github.com/kenRp01/react-todo-app', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'angularChat.jpg',
     title: 'AngularChat',
     info: 'Angular学習初めにAngular,TypeScript+Firebaseで作成したチャットアプリ',
     info2:
