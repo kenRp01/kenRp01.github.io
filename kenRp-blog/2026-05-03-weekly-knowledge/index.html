@@ -50,19 +50,11 @@ void function() {
   setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
 }()
     </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="site-wrapper"><header class="site-header"><div class="site-title"><a href="/kenRp-blog/">KenRp Blog</a></div><nav class="navigation"><a href="/kenRp-blog/">Blog</a><a href="/kenRp-blog/about">About</a><a href="/kenRp-blog/contact">Contact</a><button type="button" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"><div class="mode-container"><i class="gg-sun"></i><i class="gg-moon"></i></div></button></nav></header><div class="blog-post-container"><article class="post"><div class="post-thumbnail" style="background-image:url(/kenRp-blog/assets/codex-worklog-notebook.jpg)"><h1 class="post-title">Codexの作業ログから公開用の開発記事を作る仕組み</h1><div class="post-meta">2026年05月04日</div></div><div class="tag-row -centered"><a class="tag" href="/kenRp-blog/tag/codex">#<!-- -->codex</a><a class="tag" href="/kenRp-blog/tag/automation">#<!-- -->automation</a><a class="tag" href="/kenRp-blog/tag/knowledge">#<!-- -->knowledge</a></div><div class="blog-post-content"><p>Codexとの開発作業は、チャット上では流れが追いやすい。一方で、あとからブログ記事にしようとすると、何を調べ、どのコマンドを実行し、どの判断で実装を変えたのかが散らばりやすい。</p>
-<p>そこで今回は、Codexの作業ログとGit履歴から、日次ワークログと週次ブログ記事を生成する <code class="language-text">worklog-blogger</code> という自作Codexスキルを作った。<code class="language-text">kenRp-blog</code> はMarkdownファイルを記事として管理している個人技術ブログで、このスキルはそこへ投稿前の下書きを保存する役割を持つ。</p>
+<p>そこで今回は、Codexの作業ログとGit履歴から、日次ワークログと週次ブログ記事を生成する <code class="language-text">worklog-blogger</code> という自作Codexスキルを作った。<a href="https://github.com/kenRp01/kenRp01.github.io/tree/master/kenRp-blog">kenRp-blog</a> はMarkdownファイルを記事として管理している個人技術ブログで、このスキルはそこへ投稿前の下書きを保存する役割を持つ。</p>
 <h2>行ったこと</h2>
 <p>最初に、Codexスキルの作り方を確認し、<code class="language-text">~/.codex/skills/worklog-blogger</code> にスキル本体を作成した。あわせて、スキルをGitHubで管理するために <code class="language-text">codex-skills</code> リポジトリを用意し、ローカルのスキル配置先へ同期する <code class="language-text">install-local.sh</code> と、既存スキルをリポジトリへ取り込む <code class="language-text">sync-from-local.sh</code> を追加した。</p>
 <p>実装では、<code class="language-text">collect_worklog.py</code> にCodexセッションログ、セッションインデックス、Git履歴を読む処理を追加した。さらに、テストを先に書いて、frontmatter、出力パス、Git履歴抽出、ワークログ参照の添付が期待通りになることを確認した。</p>
 <p>その後、生成物の方針を見直した。日次でブログ記事まで作ると内容が薄くなるため、日次は詳細なワークログ、週次は他者が読んで学べるナレッジ記事に分ける構成へ変更した。</p>
-<h2>成果</h2>
-<ul>
-<li>日次ワークログは <code class="language-text">YYYY-MM-DD-worklog.md</code> として生成するようにした。</li>
-<li>週次ブログは <code class="language-text">YYYY-MM-DD-weekly-knowledge.md</code> として、週に一度だけ生成する方針にした。</li>
-<li>ワークログには、利用技術、アーキテクチャ、選定理由、実施手順、実行コマンド、重要な改修箇所、技術選定メモ、課題、進捗、次の検討点を載せるようにした。</li>
-<li>ブログ記事には、行ったこと、成果、過程、利用技術、アーキテクチャ、選定理由、導入手順、導入時の課題、次に検討した方が良いこと、参考ワークログを載せるようにした。</li>
-<li>公開前チェックは記事本文に出さず、スキル側の品質ゲートに残す方針にした。</li>
-</ul>
 <h2>過程</h2>
 <p>調査では、まずCodexのスキル作成ガイドと既存スキルの構成を確認した。次に、<code class="language-text">kenRp-blog</code> の記事形式を確認し、frontmatterに <code class="language-text">template</code>、<code class="language-text">path</code>、<code class="language-text">date</code>、<code class="language-text">title</code>、<code class="language-text">thumbnail</code>、<code class="language-text">metaDescription</code> などが必要なことを見た。</p>
 <p>実装時には、以下のようなコマンドを実行して、既存構成、テスト、出力内容を確認した。</p>
@@ -117,8 +109,4 @@ python3 skills/worklog-blogger/scripts/collect_worklog.py --date <span class="to
 <li>対象リポジトリやキーワードでセッションを絞り込み、記事テーマに関係ない作業を除外する。</li>
 <li>週次ブログでは、ワークログ本文から技術選定の判断をさらに強く抽出する。</li>
 <li>生成後に秘密情報やローカル情報を検出するチェックをテスト化する。</li>
-</ul>
-<h2>参考ワークログ</h2>
-<ul>
-<li><a href="/kenRp-blog/2026-05-03-worklog">2026-05-03の作業ログ: Add ~/.codex/AGENTS.md</a> (<code class="language-text">2026-05-03-worklog.md</code>)</li>
 </ul></div><div class="post-actions"><a class="button" href="/kenRp-blog/">Back to posts</a></div></article></div><footer class="site-footer"><p>© <!-- -->2026<!-- --> <!-- -->KenRp Blog<!-- --> • <!-- -->KenRpの個人技術メモ</p></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2026-05-03-weekly-knowledge";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app-084c80709e7e9e00c4dc.js"],"component---src-pages-404-js":["/component---src-pages-404-js-9b5a58e6e78b2d192769.js"],"component---src-pages-about-js":["/component---src-pages-about-js-52ad89c3d6ff089786bb.js"],"component---src-pages-contact-js":["/component---src-pages-contact-js-85e72983cdf3fea7482b.js"],"component---src-pages-index-js":["/component---src-pages-index-js-50d217e498ebd8328fe5.js"],"component---src-templates-blog-template-js":["/component---src-templates-blog-template-js-2cfefbca80e814ba20f5.js"],"component---src-templates-term-template-js":["/component---src-templates-term-template-js-a989edb85d31f70ca07c.js"]};/*]]>*/</script><script src="/kenRp-blog/component---src-templates-blog-template-js-2cfefbca80e814ba20f5.js" async=""></script><script src="/kenRp-blog/095aa225c6456a05afa898d2b63f81f514ac12f3-71a6cd5503774557ee24.js" async=""></script><script src="/kenRp-blog/styles-b8a088968a9324807caf.js" async=""></script><script src="/kenRp-blog/app-084c80709e7e9e00c4dc.js" async=""></script><script src="/kenRp-blog/532a2f07-4b81c8a9332f9eace879.js" async=""></script><script src="/kenRp-blog/framework-0214935d2ecd652b434d.js" async=""></script><script src="/kenRp-blog/webpack-runtime-69f191f41facee0bb21f.js" async=""></script></body></html>
